@@ -27,7 +27,7 @@ logging.debug(feats)
 
 target_name = config['target_name']
 
-X_train_all, X_test = load_datasets(feats)
+X_train_all, X_test = load_datasets(feats, target_name)
 y_train_all = load_target(target_name)
 logging.debug(X_train_all.shape)
 
@@ -36,7 +36,7 @@ models = []
 
 lgbm_params = config['lgbm_params']
 
-kf = KFold(n_splits=3, random_state=0)
+kf = KFold(n_splits=10, random_state=0)
 for train_index, valid_index in kf.split(X_train_all):
     X_train, X_valid = (
         X_train_all.iloc[train_index, :], X_train_all.iloc[valid_index, :]
@@ -69,7 +69,7 @@ logging.debug(score)
 
 # submitファイルの作成
 ID_name = config['ID_name']
-sub = pd.DataFrame(pd.read_csv('./data/input/test.csv')[ID_name])
+sub = pd.DataFrame(pd.read_csv('./data/input/test_data.csv')[ID_name])
 
 y_sub = sum(y_preds) / len(y_preds)
 

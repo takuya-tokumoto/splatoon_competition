@@ -55,8 +55,8 @@ class Feature(metaclass=ABCMeta):
 
         self.train = pd.DataFrame()
         self.test = pd.DataFrame()
-        self.train_path = Path(self.dir) / f'{self.name}_train.feather'
-        self.test_path = Path(self.dir) / f'{self.name}_test.feather'
+        self.train_path = Path(self.dir) / f'{self.name}_train_data.feather'
+        self.test_path = Path(self.dir) / f'{self.name}_test_data.feather'
 
     def run(self):
         with timer(self.name):
@@ -78,3 +78,4 @@ class Feature(metaclass=ABCMeta):
     def load(self):
         self.train = pd.read_feather(str(self.train_path))
         self.test = pd.read_feather(str(self.test_path))
+
