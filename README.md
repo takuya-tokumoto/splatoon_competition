@@ -10,9 +10,8 @@
 │   └── default.json
 ├── data
 │   ├── input
-│   │   ├── sample_submission.csv
-│   │   ├── train.csv
-│   │   └── test.csv
+│   │   ├── train_data.csv(実行前に配置)
+│   │   └── test_data.csv(実行前に配置)
 │   └── output
 ├── features
 │   ├── __init__.py
@@ -23,7 +22,8 @@
 ├── models
 │   └── lgbm.py
 ├── notebooks
-│   └── eda.ipynb
+│   ├── 01.eda.ipynb
+│   └── 02.check_enginned_mart.ipynb
 ├── scripts
 │   └── convert_to_feather.py
 ├── utils
