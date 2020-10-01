@@ -1,0 +1,21 @@
+
+# ユーザー名を登録
+git config --global user.name <ユーザー名>
+
+# メールアドレスを登録
+git config --global user.email <メールアドレス>
+
+# 作業用ディレクトリに移動
+cd work_test
+
+# スプラトゥーンコンペ用のフォルダを作成
+mkdir splatoon_competition
+
+# Gitのリポジトリを新たに作成
+git init
+
+# ローカルリポジトリにクローン
+git clone https://github.com/takuya-tokumoto/splatoon_competition.git
+
+# リモートリポジトリを追加
+git remote add origin https://github.com/takuya-tokumoto/splatoon_competition.git
