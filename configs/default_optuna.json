@@ -1,0 +1,13 @@
+{
+    "features": [
+        "ft_engineered"
+    ],
+    "lgbm_params": {
+        "learning_rate": 0.1,
+        "objective": "binary",
+        "metric": "binary_logloss"
+    },
+    "loss": "binary_logloss",
+    "target_name": "y",
+    "ID_name": "id"
+}
