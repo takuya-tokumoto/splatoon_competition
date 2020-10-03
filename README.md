@@ -12,6 +12,8 @@
 │   ├── input
 │   │   ├── train_data.csv(実行前に配置)
 │   │   └── test_data.csv(実行前に配置)
+│   │   └── statink-weapon2.csv(実行前に配置)
+│   │   └── stagedata.csv(実行前に配置)
 │   └── output
 ├── features
 │   ├── __init__.py
