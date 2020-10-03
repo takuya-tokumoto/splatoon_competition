@@ -64,7 +64,7 @@ flake8 .
 
 # memo
 
-## take1
+## try1
 
 ### RUN
 ```
