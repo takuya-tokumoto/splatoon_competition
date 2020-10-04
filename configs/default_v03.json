@@ -1,0 +1,23 @@
+{
+    "features": [
+        "ft_engineered",
+        "ft_charger_count",
+        "ft_team_rank",
+	"ft_all_buki_cate_count",
+	"ft_all_special_count",
+	"ft_stagearea"
+    ],
+    "lgbm_params": {
+        "learning_rate": 0.1,
+        "num_leaves": 8,
+        "boosting_type": "gbdt",
+        "colsample_bytree": 0.65,
+        "reg_alpha": 1,
+        "reg_lambda": 1,
+        "objective": "multiclass",
+        "num_class": 2
+    },
+    "loss": "multi_logloss",
+    "target_name": "y",
+    "ID_name": "id"
+}
